@@ -40,7 +40,7 @@ Reinforcement Learning
 
 ## 1. Agents Course — fondamentaux
 
-> 🚧 En cours
+> ✅ Terminé
 
 Première introduction aux agents basés sur les LLM.
 
@@ -60,7 +60,7 @@ Cette étape permet de comprendre comment un LLM peut interagir avec son environ
 ### Progression
 
 - [x] Unit 0 — Introduction
-- [ ] Unit 1 — Agent Fundamentals
+- [x] Unit 1 — Agent Fundamentals
 
 Une fois les fondamentaux du Agents Course terminés, le parcours continue avec les bases des LLM et des Transformers.
 
@@ -68,7 +68,7 @@ Une fois les fondamentaux du Agents Course terminés, le parcours continue avec 
 
 ## 2. LLM Course — fondamentaux
 
-> ⏳ À venir
+> 🚧 En cours
 
 Cette étape vise à mieux comprendre le moteur utilisé par les agents : les **Large Language Models** et l'architecture **Transformer**.
 
@@ -339,3 +339,8 @@ Au fil du parcours, ce dépôt couvre progressivement plusieurs domaines :
 - [Hugging Face Hub](https://huggingface.co/)
 
 ---
+
+## Certifications
+
+- ✅ Unit 1 — Fundamentals of Agents  
+  [Voir le certificat](agents-course/unit-1-fundamentals/certificate.webp)
