@@ -1,3 +1,6 @@
+smolagents[litellm]
+ipykernel
+ipywidgets
 markdownify
 smolagents==1.13.0
 requests

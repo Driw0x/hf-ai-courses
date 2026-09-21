@@ -49,11 +49,11 @@ Les détails de chaque passage et l'organisation propre à chaque cours sont doc
 hf-ai-courses/
 │
 ├── README.md
-├── requirements.txt
 ├── .gitignore
 │
 ├── agents-course/
-│   └── README.md
+│   ├── README.md
+│   └── requirements.txt
 │
 ├── llm-course/
 │   └── README.md
