@@ -25,7 +25,7 @@ Le cours est suivi en plusieurs passages afin d'alterner théorie et mise en pra
 
 ### Setup
 
-- [ ] Chapter 0 — Setup
+- [x] Chapter 0 — Setup
 
 ### Passage 1 — Fondamentaux des Transformers
 
