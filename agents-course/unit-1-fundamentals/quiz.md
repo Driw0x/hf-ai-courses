@@ -10,7 +10,7 @@ Ce fichier contient uniquement les erreurs, hésitations et points importants re
 
 ✅ Validé sans erreur.
 
-**Note liée :** [Qu'est-ce qu'un agent ?](./01-quest-ce-quun-agent.md)
+**Note liée :** [Qu'est-ce qu'un agent ?](./notes/01-quest-ce-quun-agent.md)
 
 ---
 
@@ -19,8 +19,8 @@ Ce fichier contient uniquement les erreurs, hésitations et points importants re
 ✅ Validé sans erreur.
 
 **Notes liées :**
-- [Qu'est-ce qu'un LLM ?](./02-quest-ce-quun-llm.md)
-- [Messages et tokens spéciaux](./03-messages-et-tokens-speciaux.md)
-- [Que sont les outils ?](./04-que-sont-les-outils.md)
+- [Qu'est-ce qu'un LLM ?](./notes/02-quest-ce-quun-llm.md)
+- [Messages et tokens spéciaux](./notes/03-messages-et-tokens-spéciaux.md)
+- [Que sont les outils ?](./notes/04-que-sont-les-outils.md)
 
 ---

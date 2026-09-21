@@ -51,6 +51,7 @@ hf-ai-courses/
 ├── README.md
 ├── .gitignore
 │
+├── docs/
 ├── agents-course/
 │   ├── README.md
 │   └── requirements.txt
