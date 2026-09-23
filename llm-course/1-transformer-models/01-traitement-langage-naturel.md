@@ -1,5 +1,4 @@
 # Traitement du langage naturel (NLP pour *Natural Language Processing*)
-
 > Source : [Hugging Face LLM Course — Natural Language Processing and Large Language Models](https://huggingface.co/learn/llm-course/fr/chapter1/2)
 
 ## Le NLP, qu'est-ce que c'est ?

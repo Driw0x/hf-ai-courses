@@ -65,7 +65,6 @@ Cette dernière unité constitue un approfondissement pratique supplémentaire a
 ```text
 agents-course/
 ├── README.md
-├── docs/
 ├── unit-1-fundamentals/
 ├── unit-2-frameworks/
 ├── unit-3-agentic-rag/
