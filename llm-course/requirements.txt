@@ -1,2 +1,5 @@
 transformers
 transformers[sentencepiece]
+datasets
+evaluate
+torch
