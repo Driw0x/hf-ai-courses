@@ -22,3 +22,14 @@ Les modèles de langage fonctionnent grâce à leur entraînement sur la prédic
 Deux approches d'entraînement :
 * Modélisation par langage masqué (Masked language modeling (MLM)) : utilisée par des encodeurs comme BERT, cette approche cache aléatoirement des tokens de l'entrée et entraîne le modèle à prédire le token d'origine en s'appuyant sur les mots qui l'entourent. Ce qui permet au modèle d'apprendre le contexte bidirectionnel (regarde les mots avant et après le mot masqué).
 * Modélisation causale du langage (Causal language modeling (CLM)) : utilisée par des décodeurs comme GPT, cette approche prédit le prochain token par rapport aux tokens passés de la séquence. Le modèle ne peut qu'utiliser le contexte de gauche (tokens d'avant) pour prédire le prochain token.
+
+## Types de modèles de langage
+
+Dans la bibliothèque Transformers, la plupart des modèles suivent trois types d'architecture :
+1. Modèle à encodeur uniquement (Encoder-only models (like BERT)) : Ces modèles analysent le contexte avec une approche bidirectionnelle. Ils sont adaptés aux tâches qui nécessitent une compréhension approfondie du texte, comme la classification, la reconnaissance d'entités nommées et la réponse aux questions.
+2. Modèle à décodeur uniquement (Decoder-only models (like GPT, Llama)) : Ces modèles traitent le texte de gauche à droite et sont bons pour les tâches de génération de texte. Ils complètent des phrases, écrivent des essais et génèrent même du code à partir d'un prompt.
+3. Modèle à encodeur-décodeur (like T5, BART) : Ces modèles utilisent les deux approches, utilisant l'encodeur pour comprendre l'entrée et le décodeur pour générer la sortie. Ils sont excellents pour la traduction, les résumés et la réponse aux questions.
+
+![Architecture du transformer](../../images/transformers_architecture.png)
+
+Les modèles de langage sont généralement entraînés de manière auto-supervisée sur un jeu massif de données non annotées, puis fine-tunés sur une tâche spécifique. Cette approche, appelée apprentissage par transfert, permet aux modèles de s'adapter à différentes tâches NLP avec relativement peu de données spécifiques à la tâche.
