@@ -1,5 +1,8 @@
 # Que peuvent faire les *transformers*
 > Source : [Hugging Face LLM Course — Transformers, what can they do?](https://huggingface.co/learn/llm-course/fr/chapter1/3)
+> - [Version anglaise](https://huggingface.co/learn/llm-course/en/chapter1/3)
+>
+> Les passages signalés **« Complément EN »** proviennent de la version anglaise actuelle du cours et sont absents de la traduction française.
 
 ## Travailler avec les pipelines
 
@@ -22,6 +25,8 @@ Liste non-exhaustive des [pipelines disponibles](https://huggingface.co/docs/tra
 * text-generation
 * translation (ancien pipeline, supprimé dans Transformers récent)
 * zero-shot-classification
+
+> **Complément EN :** Les pipelines ne se limitent plus au texte et peuvent également traiter des images, de l'audio et des données multimodales. Notamment `image-to-text`, `image-classification`, `object-detection`, `automatic-speech-recognition`, `audio-classification`, `text-to-speech` et `image-text-to-text`.
 
 ## *Zero-shot classification*
 
@@ -71,3 +76,14 @@ Pour obtenir un comportement équivalent, on peut utiliser `text-generation` ave
 Lorsqu'un modèle possède un `chat_template`, on peut utiliser des messages `system` et `user` afin de structurer les instructions. Si le modèle ne possède pas de `chat_template`, on peut lui fournir directement un prompt sous forme de texte brut.
 
 Pour ne récupérer que la génération et pas le prompt complet, on peut utiliser `return_full_text=False`.
+
+## Complément EN
+
+> **Complément EN :** Les nouvelles pipelines permettent notamment de combiner du texte, des images ou de l'audio et de rechercher des informations dans différentes sources afin de produire une réponse unifiée. 
+> Les modèles peuvent également être utilisés avec des données provenant de plusieurs sources ou modalités.
+>
+> Le pipeline `image-classification` permet de classifier le contenu d'une image.
+>
+> Il reçoit une image en entrée et retourne les classes prédites ainsi que leurs scores.
+>
+> Le pipeline `automatic-speech-recognition` permet de convertir un signal audio contenant de la parole en texte.
