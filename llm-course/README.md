@@ -91,3 +91,11 @@ La structure sera ajoutée progressivement en fonction des chapitres réellement
 
 Cours officiel :  
 https://huggingface.co/learn/llm-course
+
+---
+
+## Certificat
+
+Certificat obtenu après avoir terminé le Chapiter 1 — Transformer models.
+
+![Certificat Chapiter 1](1-transformer-models/image.webp)

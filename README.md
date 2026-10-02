@@ -109,3 +109,6 @@ Ce dépôt a plusieurs objectifs :
 
 - ✅ Unit 1 — Fundamentals of Agents  
   [Voir le certificat](agents-course/unit-1-fundamentals/certificate.webp)
+
+- ✅ Chapiter 1 — Transfomer model  
+  [Voir le certificat](llm-course/1-transformer-models/image.webp)
