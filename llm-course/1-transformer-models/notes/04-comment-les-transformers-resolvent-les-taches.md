@@ -33,3 +33,46 @@ Dans la bibliothèque Transformers, la plupart des modèles suivent trois types 
 ![Architecture du transformer](../../images/transformers_architecture.png)
 
 Les modèles de langage sont généralement entraînés de manière auto-supervisée sur un jeu massif de données non annotées, puis fine-tunés sur une tâche spécifique. Cette approche, appelée apprentissage par transfert, permet aux modèles de s'adapter à différentes tâches NLP avec relativement peu de données spécifiques à la tâche.
+
+## Génération de texte
+
+La génération de texte consiste à créer un texte cohérent et pertinent à partir du prompt d'entrée.
+
+GPT-2 est un modèle à décodeur uniquement capable de générer du texte convaincant (pouvant être faux) à partir d'un prompt et d'accomplir d'autres tâches de NLP, comme répondre à des questions, même s'il n'a pas été spécifiquement entraîné pour celles-ci.
+
+![Architecture de GPT-2](../../images/gpt2_architecture.png)
+
+1. GPT-2 utilise l’[encodage par paires d’octets](https://huggingface.co/docs/transformers/tokenizer_summary#bytepair-encoding-bpe) ([BPE](https://huggingface.co/docs/transformers/tokenizer_summary#bytepair-encoding-bpe)) pour tokeniser les mots et générer un embedding pour chaque token. Des encodages positionnels sont ajoutés aux embeddings des tokens afin d’indiquer la position de chaque token dans la séquence. Les embeddings d’entrée passent ensuite à travers plusieurs blocs de décodeur pour produire un état caché final. Dans chaque bloc de décodeur, GPT-2 utilise une couche d'auto-attention (self-attention) masquée qui le restreint à ne pouvoir prendre en compte que les tokens passés. Cela est différent du token [mask] de BERT : ici, le masque d'attention fixe à 0 le score des tokens futurs. Ces tokens sont présents dans la séquence, mais GPT-2 ne peut pas y prêter attention.
+
+2. La sortie du décodeur passe par une tête de modélisation du langage, qui transforme les états cachés en logits représentant les scores des différents tokens possibles. Lors de l'entraînement, les prédictions sont décalées par rapport aux tokens cibles afin que le modèle apprenne à prédire le token suivant. Une perte d'entropie croisée est ensuite calculée entre les logits et les tokens attendus.
+
+L'objectif du préentraînement de GPT-2 était basé sur la modélisation causale du langage : prédire le prochain token dans une séquence. Ce qui le rendait adapté aux tâches incluant de la génération de texte.
+
+[Exemple de modèle causal de langage](../notebooks/language_modeling.ipynb)
+
+## Classification de texte
+
+La classification de texte consiste à assigner des labels prédéfinis à des textes pour l'analyse de sentiment, la classification thématique ou la détection de spam.
+
+[BERT](https://huggingface.co/docs/transformers/model_doc/bert) est un modèle à encodeur uniquement et le premier modèle à avoir efficacement utilisé un apprentissage bidirectionnel pour mieux représenter le texte en prenant en compte les mots situés avant et après chaque mot.
+
+1. BERT utilise la tokenisation [WordPiece](https://huggingface.co/docs/transformers/tokenizer_summary#wordpiece) pour transformer le texte en embeddings de tokens. Un token spécial [CLS] est ajouté au début de la séquence et sa représentation finale est utilisée pour les tâches de classification. Le token [SEP] permet notamment de séparer deux phrases et des embeddings de segment indiquent à quelle phrase appartient chaque token.
+2. BERT a deux objectifs de préentraînement:
+    * Modélisation du langage masqué (*masked language modeling* MLM): une partie des tokens d'entrée est masquée aléatoirement et le modèle doit retrouver les tokens d'origine. Il procède à un apprentissage bidirectionnel sans directement voir le token qu'il doit prédire (peut pas tricher). Les états cachés finaux correspondant aux tokens masqués passent ensuite dans un réseau *feedforward*, suivi d'un *softmax* sur le vocabulaire afin de prédire les tokens masqués
+    * Prédiction de la phrase suivante (*next-sentence prediction* NSP): Le modèle doit déterminer si une phrase B suit une phrase A. Dans la moitié des cas, B est la phrase suivante et dans l'autre moitié B est une phrase choisie aléatoirement. La prédiction passe ensuite dans un réseau *feedforward* avec un *softmax* sur deux classes : `IsNext` et `NotNext`.
+3. Les embeddings d'entrée passent à travers plusieurs couches d'encodeur afin de produire les états cachés finaux.
+
+Pour utiliser BERT pour une tâche de classification de texte, on lui ajoute une tête de classification de séquence. Elle transforme l'état caché final associé au token [CLS] en scores associés aux différents labels. Une perte d'entropie croisée est ensuite calculée entre ces scores et le label attendu afin d'entraîner le modèle à prédire le label le plus probable.
+
+état caché = représentation numérique de l'information
+→ couche linéaire / feedforward = transforme la représentation
+→ logits = scores numériques bruts pour les sorties possibles
+→ softmax = transforme les logits en probabilités
+
+[Exemple de classification de texte](../notebooks/sequence_classification.ipynb)
+
+## Classification de tokens
+
+Elle consiste à assigner un label à chaque token d'une séquence pour la reconnaissance d'entités nommées (NER) ou l'étiquetage grammatical (*part-of-speech tagging*).
+
+Pour utiliser BERT pour ce type de tâche, on lui ajoute une tête de classification de tokens. Elle transforme l’état caché final de chaque token en scores associés aux différents labels. Une perte d’entropie croisée est ensuite calculée entre les scores et le label attendu de chaque token afin d’apprendre à prédire le label le plus probable.
