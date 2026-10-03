@@ -76,3 +76,106 @@ Pour utiliser BERT pour une tâche de classification de texte, on lui ajoute une
 Elle consiste à assigner un label à chaque token d'une séquence pour la reconnaissance d'entités nommées (NER) ou l'étiquetage grammatical (*part-of-speech tagging*).
 
 Pour utiliser BERT pour ce type de tâche, on lui ajoute une tête de classification de tokens. Elle transforme l’état caché final de chaque token en scores associés aux différents labels. Une perte d’entropie croisée est ensuite calculée entre les scores et le label attendu de chaque token afin d’apprendre à prédire le label le plus probable.
+
+[Exemple de classification de tokens](../notebooks/token_classification.ipynb)
+
+## Réponse aux questions
+
+Pour utiliser BERT pour la réponse aux questions, on lui ajoute une tête de classification de segments (span classification head). Cette couche linéaire reçoit les états cachés finaux et applique une transformation linéaire afin de calculer les scores correspondant aux positions de début et de fin du segment contenant la réponse. La perte d’entropie croisée est calculée entre ces scores et les positions indiquées par les étiquettes afin de déterminer le segment de texte le plus susceptible de correspondre à la réponse
+
+[Exemple de réponse aux questions](../notebooks/question_answering.ipynb)
+
+## Résumé
+
+Les modèles encodeur-décodeur comme BART et T5 sont conçus pour le schéma séquence-à-séquence utilisé dans les tâches de résumé.
+
+![Architecture de BART](../../images/bart_architecture.png)
+
+1. L'architecture de l'encodeur de BART est similaire à celle de BERT, elle reçoit deux informations pour chaque token: sa représentation vectorielle (token embedding) et sa position dans la séquence (positional embedding). BART est pré-entraîné en altérant l'entrée, puis ne la reconstruisant à l'aidde du décodeur. Bart peut appliquer n'importe quelle type d'altération à l'entrée. La stratégie de *text infilling* reste toutefois la meilleure. Elle remplace plusieurs segments du texte en token [mask]. Le modèle apprend alors à prédire les tokens masqués etle nombre de tokens manquant. Les deux informations pour chaque token sont ensuite transmise à l'encodeur, qui produit les états cachés finaux. Cependant, contrairement à BERT, BART n’ajoute pas de réseau feed-forward final pour prédire un mot.
+
+2. La sortie de l’encodeur est transmise au décodeur, qui doit prédire les tokens masqués ainsi que les tokens non altérés à partir de cette sortie. Cela fournit au décodeur un contexte supplémentaire pour l’aider à reconstruire le texte d’origine. La sortie du décodeur est ensuite transmise à une tête de modélisation du langage, qui applique une transformation linéaire afin de convertir les états cachés en scores. La perte d’entropie croisée est calculée entre ces scores et les tokens attendus. Lors de l’entraînement, les entrées du décodeur sont décalées d’une position vers la droite afin que le modèle apprenne à prédire le token suivant.
+
+[Exemple de résumé](../notebooks/summarization.ipynb)
+
+## Traduction
+
+La traduction consiste à convertir un texte d’une langue vers une autre tout en préservant son sens. Il s’agit d’un autre exemple de tâche séquence à séquence (sequence-to-sequence), ce qui signifie qu'on peut utiliser un modèle encodeur-décodeur comme BART ou T5.
+
+A = nouvel encodeur de la langue source : encodeur ajouté pour la traduction, initialisé aléatoirement.
+B = encodeur pré-entraîné de BART : encodeur déjà présent dans BART avant l’adaptation à la traduction.
+C = décodeur pré-entraîné de BART : produit le texte dans la langue cible.
+
+BART est adapté à la traduction en ajoutant un encodeur distinct [A] chargé de transformer la langue source en une représentation pouvant être décodée par le décodeur [C]. Les embeddings produits par ce nouvel encodeur [A] sont transmis à l’encodeur pré-entraîné [B] à la place des embeddings de mots d’origine. L’encodeur de la langue source [A] est entraîné en mettant à jour cet encodeur, les embeddings positionnels et les embeddings d’entrée à l’aide de la perte d’entropie croisée calculée à partir de la sortie du modèle. Lors de cette première étape, les paramètres de l’encodeur pré-entraîné [B] et du décodeur [C] sont fixés. Dans une seconde étape, l’ensemble des paramètres du modèle [A + B + C] est entraîné conjointement.
+
+[Exemple de traduction](../notebooks/translation.ipynb)
+
+## Modalités au-delà du texte
+
+Les Transformers ne se limitent pas au texte. Ils peuvent également être appliqués à d’autres modalités, comme la voix et l’audio, les images et les vidéos.
+
+### Voix et audio
+
+Whisper est un Transformer encodeur-décodeur (séquence à séquence) pré-entraîné sur 680 000 heures de données audio annotées. Cette quantité de données de pré-entraînement lui permet d’obtenir de bonnes performances en zero-shot sur des tâches audio en anglais ainsi que dans de nombreuses autres langues. Le décodeur permet à Whisper de transformer les représentations de la parole apprises par l’encodeur en sorties utiles, comme du texte, sans nécessiter de *fine-tuning*. Whisper fonctionne directement.
+
+![Architecture de Whisper](../../images/whisper_architecture.png)
+Le diagramme est tiré de l'[article sur Whisper](https://huggingface.co/papers/2212.04356)
+
+Ce modèle comporte deux composants principaux :
+
+1. Un **encodeur** traite l’audio en entrée. L’audio brut est d’abord converti en un spectrogramme log-Mel. Ce spectrogramme est ensuite transmis à un réseau encodeur Transformer.
+2. Un **décodeur** reçoit la représentation encodée de l’audio et prédit de manière autorégressive les tokens de texte correspondants. Il s’agit d’un décodeur Transformer standard entraîné à prédire le prochain token de texte à partir des tokens précédents et de la sortie de l’encodeur. Des tokens spéciaux sont placés au début de l’entrée du décodeur afin d’orienter le modèle vers des tâches spécifiques, comme la transcription, la traduction ou l’identification de la langue.
+
+### Reconnaissance automatique de la parole
+
+Pour utiliser le modèle pré-entraîné pour la reconnaissance automatique de la parole, Il faut exploiter l’ensemble de son architecture encodeur-décodeur. L’encodeur traite l’audio en entrée, tandis que le décodeur génère de manière autorégressive la transcription, token par token. Lors du *fine-tuning*, le modèle est généralement entraîné à l’aide d’une fonction de perte séquence à séquence standard, comme l’entropie croisée, afin de prédire les bons tokens de texte à partir de l’entrée audio.
+
+La manière la plus simple d’utiliser un modèle *fine-tuned* pour l’inférence consiste à utiliser une `pipeline`.
+
+```python
+from transformers import pipeline
+
+transcriber = pipeline(
+    task="automatic-speech-recognition",
+    model="openai/whisper-base.en"
+)
+
+transcriber(
+    "https://huggingface.co/datasets/Narsil/asr_dummy/resolve/main/mlk.flac"
+)
+
+# Sortie :
+# {'text': ' I have a dream that one day this nation will rise up and live out the true meaning of its creed.'}
+```
+
+[Exemple de reconnaissance automatique de la parole](../notebooks/asr.ipynb)
+
+### Vision par ordinateur
+
+Il existe deux principales approches pour traiter les tâches de vision par ordinateur :
+
+1. Découper une image en une séquence de patchs et les traiter en parallèle à l’aide d’un Transformer.
+2. Utiliser un CNN moderne, comme [**ConvNeXT**](https://huggingface.co/docs/transformers/model_doc/convnext), qui repose sur des couches de convolution tout en adoptant des architectures de réseau modernes.
+
+ViT et ConvNeXT sont couramment utilisés pour la classification d’images.
+
+### Classification d’images
+
+La classification d’images est une tâche fondamentale de la vision par ordinateur.
+
+ViT et ConvNeXT peuvent tous deux être utilisés pour la classification d’images.
+
+[**ViT**](https://huggingface.co/docs/transformers/model_doc/vit) remplace entièrement les convolutions par une architecture Transformer pure.
+
+![Architecture de ViT](../../images/vit_architecture.jpg)
+
+La principale innovation introduite par ViT concerne la manière dont les images sont fournies à un Transformer :
+
+1. Une image est découpée en **patchs carrés qui ne se superposent pas**, chacun étant ensuite transformé en un vecteur, appelé *patch embedding*. Ces embeddings de patchs sont générés à l’aide d’une couche convolutionnelle 2D, qui produit les dimensions d’entrée appropriées pour le Transformer de base, soit 768 valeurs par patch embedding. Par exemple, une image de 224 × 224 pixels peut être découpée en 196 patchs de 16 × 16 pixels. De la même manière qu’un texte est tokenisé en tokens, une image est ainsi « tokenisée » en une séquence de patchs.
+
+2. Un *embedding apprenable*, correspondant à un token spécial `[CLS]`, est ajouté au début de la séquence des patch embeddings, comme dans BERT. L’état caché final du token `[CLS]` est ensuite utilisé comme entrée de la tête de classification associée, tandis que les autres sorties sont ignorées. Ce token aide le modèle à apprendre une représentation globale de l’image.
+
+3. Il reste ensuite à ajouter aux patch embeddings et au token apprenable des *embeddings de position*, car le modèle ne connaît pas l’ordre des différents patchs de l’image. Ces embeddings de position sont eux aussi apprenables et possèdent la même dimension que les patch embeddings. Enfin, l’ensemble de ces embeddings est transmis à l’encodeur Transformer.
+
+4. La sortie correspondant au token `[CLS]` uniquement est transmise à une tête constituée d’un perceptron multicouche (**MLP**). L’objectif de pré-entraînement de ViT est simplement une tâche de classification. Comme pour les autres têtes de classification, la tête MLP transforme cette sortie en scores associés aux différentes classes, puis calcule la perte d’entropie croisée afin d’identifier la classe la plus probable.
+
+[Exemple de classification d'images](../notebooks/image_classification.ipynb)
