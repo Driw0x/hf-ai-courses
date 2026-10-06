@@ -147,8 +147,6 @@ transcriber(
 # {'text': ' I have a dream that one day this nation will rise up and live out the true meaning of its creed.'}
 ```
 
-[Exemple de reconnaissance automatique de la parole](../notebooks/asr.ipynb)
-
 ### Vision par ordinateur
 
 Il existe deux principales approches pour traiter les tâches de vision par ordinateur :
