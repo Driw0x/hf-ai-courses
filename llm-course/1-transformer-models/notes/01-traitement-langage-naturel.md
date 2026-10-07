@@ -18,12 +18,12 @@ Les tâches NLP les plus courantes :
   * etc.
 
 * **Classification de chaque mot d'une phrase** :
-  * identifier les composants grammaticaux d’une phrase (nom, verbe, adjectif) ;
+  * identifier les composants grammaticaux d'une phrase (nom, verbe, adjectif) ;
   * identifier les entités nommées (personne, lieu, organisation) ;
   * etc.
 
 * **Génération de texte** :
-  * compléter le début d’un texte avec du texte généré automatiquement ;
+  * compléter le début d'un texte avec du texte généré automatiquement ;
   * remplacer les mots manquants ou masqués dans un texte.
 
 * **Extraction d'une réponse à partir d'un texte** :

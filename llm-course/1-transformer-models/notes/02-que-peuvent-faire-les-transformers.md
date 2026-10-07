@@ -16,9 +16,9 @@ Il y a trois étapes principales lorsque nous passons du texte à un pipeline:
 3. Post-traitement des prédictions du modèle pour qu'on puisse les comprendre
 
 Liste non-exhaustive des [pipelines disponibles](https://huggingface.co/docs/transformers/main_classes/pipelines):
-* feature-extraction (pour obtenir la représentation vectorielle d’un texte)
+* feature-extraction (pour obtenir la représentation vectorielle d'un texte)
 * fill-mask
-* ner (named entity recognition ou reconnaissance d’entités nommées)
+* ner (named entity recognition ou reconnaissance d'entités nommées)
 * question-answering
 * sentiment-analysis
 * summarization (ancien pipeline, supprimé dans Transformers récent)
@@ -53,9 +53,9 @@ On peut trouver une large base de modèles pour toutes tâches [ici](https://hug
 
 Il dispose d'un argument `top_k`qui permet de contrôler le nombre de possibilités pour le mot masqué
 
-## Reconnaissance d’entités nommées
+## Reconnaissance d'entités nommées
 
-La reconnaissance d’entités nommées ou NER (*Named Entity Recognition*) consiste à demander au modèle de reconnaitre les entités du input tel que des personnes, des lieux ou des organisations.
+La reconnaissance d'entités nommées ou NER (*Named Entity Recognition*) consiste à demander au modèle de reconnaitre les entités du input tel que des personnes, des lieux ou des organisations.
 
 Le prétraitement de l'entrée peut séparer des mots en plusieurs sous-tokens.
 Par exemple : `Sylvain` → `S`, `##yl`, `##va`, `##in`.
