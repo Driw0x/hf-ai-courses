@@ -1,12 +1,12 @@
-# Quiz — Unité 1
+# Quiz - Unité 1
 
-> Source : [Hugging Face Agents Course — Unit 1](https://huggingface.co/learn/agents-course/fr/unit1/introduction)
+> Source : [Hugging Face Agents Course - Unit 1](https://huggingface.co/learn/agents-course/fr/unit1/introduction)
 
 Ce fichier contient uniquement les erreurs, hésitations et points importants rencontrés dans les quiz.
 
 ---
 
-## Quiz 1 — Qu'est-ce qu'un agent ?
+## Quiz 1 - Qu'est-ce qu'un agent ?
 
 ✅ Validé sans erreur.
 
@@ -14,7 +14,7 @@ Ce fichier contient uniquement les erreurs, hésitations et points importants re
 
 ---
 
-## Quiz 2 — LLM, messages et outils
+## Quiz 2 - LLM, messages et outils
 
 ✅ Validé sans erreur.
 

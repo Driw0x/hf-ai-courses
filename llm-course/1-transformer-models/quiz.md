@@ -1,6 +1,6 @@
 # Quiz Chapitre 1
 
-> Source : [Hugging Face LLM Course — Chapter 1](https://huggingface.co/learn/llm-course/chapter1/)
+> Source : [Hugging Face LLM Course - Chapter 1](https://huggingface.co/learn/llm-course/chapter1/)
 
 Ce fichier contient uniquement les erreurs, hésitations et points importants rencontrés dans les quiz de l’unité.
 
@@ -8,7 +8,7 @@ Ce fichier contient uniquement les erreurs, hésitations et points importants re
 
 ## Ungraded Quiz
 
-### Erreur — What possible source can the bias observed in a model have?
+### Erreur - What possible source can the bias observed in a model have?
 
 **Erreur :**  
 Oubli de **The metric the model was optimizing for is biased.**

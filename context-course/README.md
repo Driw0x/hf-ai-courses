@@ -17,13 +17,13 @@ L'objectif est d'apprendre à structurer et fournir efficacement les information
 
 Le cours peut être suivi de manière continue après le Agents Course :
 
-- [ ] Unit 0 — Onboarding
-- [ ] Unit 1 — Agent Skills
-- [ ] Unit 2 — Model Context Protocol
-- [ ] Unit 3 — Plugins
-- [ ] Unit 4 — Sub-agents
-- [ ] Unit 5 — Hooks
-- [ ] Unit 6 — Bonus: Nano Harness
+- [ ] Unit 0 - Onboarding
+- [ ] Unit 1 - Agent Skills
+- [ ] Unit 2 - Model Context Protocol
+- [ ] Unit 3 - Plugins
+- [ ] Unit 4 - Sub-agents
+- [ ] Unit 5 - Hooks
+- [ ] Unit 6 - Bonus: Nano Harness
 
 Les Units 0 à 5 constituent le cœur du cours. L'Unit 6 complète le parcours en montrant comment construire une boucle d'agent minimale depuis zéro.
 

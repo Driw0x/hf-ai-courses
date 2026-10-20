@@ -1,5 +1,5 @@
 # Traitement du langage naturel (NLP pour *Natural Language Processing*)
-> Source : [Hugging Face LLM Course — Natural Language Processing and Large Language Models](https://huggingface.co/learn/llm-course/fr/chapter1/2)
+> Source : [Hugging Face LLM Course - Natural Language Processing and Large Language Models](https://huggingface.co/learn/llm-course/fr/chapter1/2)
 > - [Version anglaise](https://huggingface.co/learn/llm-course/en/chapter1/2)
 >
 > Les passages signalés **« Complément EN »** proviennent de la version anglaise actuelle du cours et sont absents de la traduction française.
@@ -43,7 +43,7 @@ La difficulté vient de la complexité du langage et de son contexte. Il existe 
 
 > **Complément EN :** Malgré les progrès des LLM, la compréhension de l'ambiguïté, du contexte culturel, du sarcasme et de l'humour reste difficile. Cependant, l'entraînement sur de très grands jeux de données diversifiés leur permet de mieux gérer ces cas. Leurs performances restent tout de même inférieures à celles des humains.
 
-## L'essor des grands modèles de langage (LLM) — Complément EN
+## L'essor des grands modèles de langage (LLM) - Complément EN
 
 > Cette section est uniquement présente dans la version anglaise actuelle du cours.
 > [!NOTE]

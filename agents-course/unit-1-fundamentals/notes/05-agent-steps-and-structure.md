@@ -1,5 +1,5 @@
 # Comprendre les agents à travers le cycle Réflexion-Action-Observation
-> Source : [Hugging Face Agents Course — Understanding AI Agents through the Thought-Action-Observation Cycle](https://huggingface.co/learn/agents-course/fr/unit1/agent-steps-and-structure)
+> Source : [Hugging Face Agents Course - Understanding AI Agents through the Thought-Action-Observation Cycle](https://huggingface.co/learn/agents-course/fr/unit1/agent-steps-and-structure)
 
 Cette section explore le **workflow** de l'agent, le cycle Réflexion-Action-Observation (Thought-Action-Observation).
 

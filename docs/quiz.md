@@ -1,4 +1,4 @@
-# Quiz — Unité X
+# Quiz - Unité X
 
 > Source : [Nom du cours ou de la section](URL)
 
@@ -6,9 +6,9 @@ Ce fichier contient uniquement les erreurs, hésitations et points importants re
 
 ---
 
-## Quiz X — Titre du quiz
+## Quiz X - Titre du quiz
 
-### Erreur — Titre du concept
+### Erreur - Titre du concept
 
 **Erreur :**  
 ...
@@ -26,7 +26,7 @@ Ce fichier contient uniquement les erreurs, hésitations et points importants re
 
 ---
 
-## Quiz X — Titre du quiz
+## Quiz X - Titre du quiz
 
 ✅ Validé sans erreur.
 

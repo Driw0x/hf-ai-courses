@@ -25,37 +25,37 @@ Le cours est suivi en plusieurs passages afin d'alterner théorie et mise en pra
 
 ### Setup
 
-- [x] Chapter 0 — Setup
+- [x] Chapter 0 - Setup
 
-### Passage 1 — Fondamentaux des Transformers
+### Passage 1 - Fondamentaux des Transformers
 
-- [x] Chapter 1 — Transformer models
-- [ ] Chapter 2 — Using 🤗 Transformers
-- [ ] Chapter 3 — Fine-tuning a pretrained model
-- [ ] Chapter 4 — Sharing models and tokenizers
+- [x] Chapter 1 - Transformer models
+- [ ] Chapter 2 - Using 🤗 Transformers
+- [ ] Chapter 3 - Fine-tuning a pretrained model
+- [ ] Chapter 4 - Sharing models and tokenizers
 
 Ce premier passage fournit les bases nécessaires pour retourner au **Agents Course** avec une meilleure compréhension des modèles utilisés par les agents.
 
-### Passage 2 — Datasets, tokenizers et NLP
+### Passage 2 - Datasets, tokenizers et NLP
 
-- [ ] Chapter 5 — The 🤗 Datasets library
-- [ ] Chapter 6 — The 🤗 Tokenizers library
-- [ ] Chapter 7 — Classical NLP tasks
-- [ ] Chapter 8 — How to ask for help
-- [ ] Chapter 9 — Building and sharing demos
+- [ ] Chapter 5 - The 🤗 Datasets library
+- [ ] Chapter 6 - The 🤗 Tokenizers library
+- [ ] Chapter 7 - Classical NLP tasks
+- [ ] Chapter 8 - How to ask for help
+- [ ] Chapter 9 - Building and sharing demos
 
 Cette partie sera reprise après l'approfondissement des systèmes agentiques et du context engineering.
 
-### Passage 3 — Données et fine-tuning avancé
+### Passage 3 - Données et fine-tuning avancé
 
-- [ ] Chapter 10 — Curate high-quality datasets
-- [ ] Chapter 11 — Fine-tune Large Language Models
+- [ ] Chapter 10 - Curate high-quality datasets
+- [ ] Chapter 11 - Fine-tune Large Language Models
 
 Ces chapitres permettent d'aller plus loin sur la préparation des données, le Supervised Fine-Tuning, les chat templates, LoRA et l'évaluation.
 
-### Passage 4 — Reasoning models
+### Passage 4 - Reasoning models
 
-- [ ] Chapter 12 — Build Reasoning Models
+- [ ] Chapter 12 - Build Reasoning Models
 
 Ce dernier chapitre sera abordé après avoir acquis davantage de bases en **reinforcement learning**, afin de mieux comprendre les méthodes utilisées pour entraîner des modèles de raisonnement.
 
@@ -96,6 +96,6 @@ https://huggingface.co/learn/llm-course
 
 ## Certificat
 
-Certificat obtenu après avoir terminé le Chapiter 1 — Transformer models.
+Certificat obtenu après avoir terminé le Chapiter 1 - Transformer models.
 
 ![Certificat Chapiter 1](1-transformer-models/image.webp)

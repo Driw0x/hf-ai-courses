@@ -14,19 +14,19 @@ L'idée est de commencer par comprendre concrètement le fonctionnement d'un age
 
 ### Progression
 
-- [x] **Passage 1 — Agents Course : fondamentaux**
-- [ ] **Passage 2 — LLM Course : fondamentaux**
-- [ ] **Passage 3 — Agents Course : approfondissement**
-- [ ] **Passage 4 — Agents Course : observabilité et évaluation**
-- [ ] **Passage 5 — Context Course**
-- [ ] **Passage 6 — LLM Course : Datasets, Tokenizers et NLP**
-- [ ] **Passage 7 — LLM Course : données et fine-tuning avancé**
-- [ ] **Passage 8 — a smol course : fine-tuning et alignment**
-- [ ] **Passage 9 — Agents Course : fine-tuning pour le function calling**
-- [ ] **Passage 10 — Deep Reinforcement Learning Course**
-- [ ] **Passage 11 — LLM Course : reasoning models**
-- [ ] **Passage 12 — a smol course : unités avancées**
-- [ ] **Passage 13 — Agents Course : agents dans les jeux**
+- [x] **Passage 1 - Agents Course : fondamentaux**
+- [ ] **Passage 2 - LLM Course : fondamentaux**
+- [ ] **Passage 3 - Agents Course : approfondissement**
+- [ ] **Passage 4 - Agents Course : observabilité et évaluation**
+- [ ] **Passage 5 - Context Course**
+- [ ] **Passage 6 - LLM Course : Datasets, Tokenizers et NLP**
+- [ ] **Passage 7 - LLM Course : données et fine-tuning avancé**
+- [ ] **Passage 8 - a smol course : fine-tuning et alignment**
+- [ ] **Passage 9 - Agents Course : fine-tuning pour le function calling**
+- [ ] **Passage 10 - Deep Reinforcement Learning Course**
+- [ ] **Passage 11 - LLM Course : reasoning models**
+- [ ] **Passage 12 - a smol course : unités avancées**
+- [ ] **Passage 13 - Agents Course : agents dans les jeux**
 
 L'**Open-Source AI Cookbook** est utilisé en parallèle comme ressource complémentaire selon les besoins.
 
@@ -107,8 +107,8 @@ Ce dépôt a plusieurs objectifs :
 
 ## Certifications
 
-- ✅ Unit 1 — Fundamentals of Agents  
+- ✅ Unit 1 - Fundamentals of Agents  
   [Voir le certificat](agents-course/unit-1-fundamentals/certificate.webp)
 
-- ✅ Chapiter 1 — Transfomer model  
+- ✅ Chapiter 1 - Transfomer model  
   [Voir le certificat](llm-course/1-transformer-models/image.webp)

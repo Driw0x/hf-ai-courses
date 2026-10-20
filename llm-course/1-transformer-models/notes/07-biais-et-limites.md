@@ -1,5 +1,5 @@
 # Biais et limites
-> Source : [Hugging Face LLM Course — Bias and limitations](https://huggingface.co/learn/llm-course/en/chapter1/9)
+> Source : [Hugging Face LLM Course - Bias and limitations](https://huggingface.co/learn/llm-course/en/chapter1/9)
 
 Lors de l'utilisation d'un modèle pré-entraîné ou une version *fine-tunée*, il faut savoir que ces outils ont leurs limites. Pour permettre le pré-entraînement sur de grandes quantités de données, les chercheurs peuvent récupérer des données incorrectes d'internet.
 

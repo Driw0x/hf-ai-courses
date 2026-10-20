@@ -1,5 +1,5 @@
 # Comment les *transformers* résolvent les tâches ?
-> Source : [Hugging Face LLM Course — How Transformers solve tasks](https://huggingface.co/learn/llm-course/en/chapter1/5)
+> Source : [Hugging Face LLM Course - How Transformers solve tasks](https://huggingface.co/learn/llm-course/en/chapter1/5)
 
 Dans [Que peuvent faire les *transformers* ?](./02-que-peuvent-faire-les-transformers.md), on a découvert le NLP et les tâches qu'ils peuvent résoudre telles que des tâches de vision par ordinateur, de reconnaissance vocale et audio et leurs applications.
 

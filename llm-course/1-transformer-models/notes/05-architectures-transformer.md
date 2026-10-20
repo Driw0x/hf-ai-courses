@@ -1,5 +1,5 @@
 # Architectures Transformer
-> Source : [Hugging Face LLM Course — Transformer Architectures](https://huggingface.co/learn/llm-course/en/chapter1/6)
+> Source : [Hugging Face LLM Course - Transformer Architectures](https://huggingface.co/learn/llm-course/en/chapter1/6)
 
 ## Modèles à encodeur uniquement
 

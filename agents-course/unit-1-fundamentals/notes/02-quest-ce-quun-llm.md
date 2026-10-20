@@ -1,5 +1,5 @@
 # Qu'est-ce qu'un LLM ?
-> Source : [Hugging Face Agents Course — What are LLMs?](https://huggingface.co/learn/agents-course/fr/unit1/what-are-llms)
+> Source : [Hugging Face Agents Course - What are LLMs?](https://huggingface.co/learn/agents-course/fr/unit1/what-are-llms)
 
 Un LLM comprend et génère du langage humain, basés sur l'architecture *Transformer* pour la plupart.
 
