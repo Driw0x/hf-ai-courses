@@ -29,7 +29,7 @@ Le cours est suivi en plusieurs passages afin d'alterner théorie et mise en pra
 
 ### Passage 1 — Fondamentaux des Transformers
 
-- [ ] Chapter 1 — Transformer models
+- [x] Chapter 1 — Transformer models
 - [ ] Chapter 2 — Using 🤗 Transformers
 - [ ] Chapter 3 — Fine-tuning a pretrained model
 - [ ] Chapter 4 — Sharing models and tokenizers
