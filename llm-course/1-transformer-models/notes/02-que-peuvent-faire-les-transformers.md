@@ -1,5 +1,5 @@
 # Que peuvent faire les *transformers*
-> Source : [Hugging Face LLM Course — Transformers, what can they do?](https://huggingface.co/learn/llm-course/fr/chapter1/3)
+> Source : [Hugging Face LLM Course - Transformers, what can they do?](https://huggingface.co/learn/llm-course/fr/chapter1/3)
 > - [Version anglaise](https://huggingface.co/learn/llm-course/en/chapter1/3)
 >
 > Les passages signalés **« Complément EN »** proviennent de la version anglaise actuelle du cours et sont absents de la traduction française.

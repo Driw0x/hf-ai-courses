@@ -1,5 +1,5 @@
 # Réflexions : raisonnement interne et l’approche ReAct
-> Source : [Hugging Face Agents Course — Thought: Internal Reasoning and the ReAct Approach](https://huggingface.co/learn/agents-course/fr/unit1/thoughts)
+> Source : [Hugging Face Agents Course - Thought: Internal Reasoning and the ReAct Approach](https://huggingface.co/learn/agents-course/fr/unit1/thoughts)
 
 Les réflexions représentent la capacité du LLM de l’agent à tirer les points importants du prompt utilisateur.
 

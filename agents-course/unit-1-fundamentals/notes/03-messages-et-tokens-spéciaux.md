@@ -1,5 +1,5 @@
 # Messages et tokens spéciaux
-> Source : [Hugging Face Agents Course — Messages and Special Tokens](https://huggingface.co/learn/agents-course/fr/unit1/messages-and-special-tokens)
+> Source : [Hugging Face Agents Course - Messages and Special Tokens](https://huggingface.co/learn/agents-course/fr/unit1/messages-and-special-tokens)
 
 ## Patron de chat (gabarit de chat)
 

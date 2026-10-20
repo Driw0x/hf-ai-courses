@@ -1,5 +1,5 @@
 # Qu'est-ce qu'un agent ?
-> Source : [Hugging Face Agents Course — What are Agents?](https://huggingface.co/learn/agents-course/fr/unit1/what-are-agents)
+> Source : [Hugging Face Agents Course - What are Agents?](https://huggingface.co/learn/agents-course/fr/unit1/what-are-agents)
 
 Un agent est une entité qui **comprend le langage naturel**, puis raisonne et planifie pour accomplir une demande.
 

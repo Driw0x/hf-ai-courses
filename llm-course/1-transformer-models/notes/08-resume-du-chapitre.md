@@ -1,5 +1,5 @@
 # Résumé
-> Source : [Hugging Face LLM Course — Summary](https://huggingface.co/learn/llm-course/en/chapter1/10)
+> Source : [Hugging Face LLM Course - Summary](https://huggingface.co/learn/llm-course/en/chapter1/10)
 
 ## Concepts clés abordés
 

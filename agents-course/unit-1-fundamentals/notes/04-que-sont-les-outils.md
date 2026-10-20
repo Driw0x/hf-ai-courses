@@ -1,5 +1,5 @@
 # Que sont les outils ?
-> Source : [Hugging Face Agents Course — What are Tools?](https://huggingface.co/learn/agents-course/fr/unit1/tools)
+> Source : [Hugging Face Agents Course - What are Tools?](https://huggingface.co/learn/agents-course/fr/unit1/tools)
 
 Les outils permettent aux agents de pouvoir effectuer des actions.
 

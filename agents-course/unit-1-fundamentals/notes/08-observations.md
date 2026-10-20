@@ -1,6 +1,6 @@
 # Observer : intégrer le retour d’information pour réfléchir et s’adapter
 
-> Source : [Hugging Face Agents Course — Observe: Integrating Feedback to Reflect and Adapt](https://huggingface.co/learn/agents-course/fr/unit1/observations)
+> Source : [Hugging Face Agents Course - Observe: Integrating Feedback to Reflect and Adapt](https://huggingface.co/learn/agents-course/fr/unit1/observations)
 
 Perception des conséquences d'une action.
 

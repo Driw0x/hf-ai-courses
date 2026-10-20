@@ -1,5 +1,5 @@
 # Comment fonctionnent les *transformers*?
-> Source : [Hugging Face LLM Course — How do Transformers work?](https://huggingface.co/learn/llm-course/fr/chapter1/4)
+> Source : [Hugging Face LLM Course - How do Transformers work?](https://huggingface.co/learn/llm-course/fr/chapter1/4)
 
 Trois catégories de modèles:
 * type GPT (transformers autorégressifs)

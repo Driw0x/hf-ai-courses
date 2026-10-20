@@ -1,5 +1,5 @@
 # Exploration approfondie de l'inférence pour la génération de texte avec les LLM
-> Source : [Hugging Face LLM Course — Deep dive into Text Generation Inference with LLMs](https://huggingface.co/learn/llm-course/en/chapter1/8)
+> Source : [Hugging Face LLM Course - Deep dive into Text Generation Inference with LLMs](https://huggingface.co/learn/llm-course/en/chapter1/8)
 
 ## Comprendre les bases
 

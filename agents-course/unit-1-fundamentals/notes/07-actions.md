@@ -1,6 +1,6 @@
 # Actions : permettre à l’agent d’interagir avec son environnement
 
-> Source : [Hugging Face Agents Course — Actions: Enabling the Agent to Engage with Its Environment](https://huggingface.co/learn/agents-course/fr/unit1/actions)
+> Source : [Hugging Face Agents Course - Actions: Enabling the Agent to Engage with Its Environment](https://huggingface.co/learn/agents-course/fr/unit1/actions)
 
 Étape où l'agent interagit avec son environnement.
 

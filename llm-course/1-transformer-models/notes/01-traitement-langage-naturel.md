@@ -1,5 +1,5 @@
 # Traitement du langage naturel (NLP pour *Natural Language Processing*)
-> Source : [Hugging Face LLM Course — Natural Language Processing and Large Language Models](https://huggingface.co/learn/llm-course/fr/chapter1/2)
+> Source : [Hugging Face LLM Course - Natural Language Processing and Large Language Models](https://huggingface.co/learn/llm-course/fr/chapter1/2)
 > - [Version anglaise](https://huggingface.co/learn/llm-course/en/chapter1/2)
 >
 > Les passages signalés **« Complément EN »** proviennent de la version anglaise actuelle du cours et sont absents de la traduction française.
